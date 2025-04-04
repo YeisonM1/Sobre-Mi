@@ -1,0 +1,190 @@
+:root {
+    --grisOscuro: #1E1E1E;
+    --textoPrincipal: #FFFFFF;
+    --colorNeon: #00FF88;
+    --secciones: #2E2E2E;
+    --colorSecundario: #3A86FF;
+
+    --fuentePrincipal: "Poppins", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;    
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    background-color: var(--grisOscuro);
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.contenedor_iconos {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--textoPrincipal);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+/** Header **/
+
+.header__nombre {
+    font-size: 4rem;
+}
+
+.header__descripcion {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--colorNeon);
+    background-color: var(--grisOscuro);
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/*Sobre mi */
+
+.grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+}
+.recuadro {
+        width: 100rem;
+        height: 50rem;
+        background-color: var(--secciones);
+        margin: 0 auto;
+        border-radius: 2rem;
+}
+
+.titulo {
+    font-size: 3rem;
+}
+
+.sobremi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobremi__parrafo {
+    font-size: 2.6rem;
+    color: var(--textoPrincipal);
+    margin-right: 5rem;
+}
+
+/* Redes sociales */
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 100rem;
+    height: auto;
+    border-radius: 1rem;
+    padding: 2rem 0;
+    background-color: var(--secciones);
+}
+
+.icono {
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--colorSecundario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Otra seccion **/
+.diferente {
+    padding: 1rem;
+}
+
+.recuadro--creador {
+    width: 100rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color: var(--secciones);
+}
+
+/** Footer **/
+
+.footer__texto {
+    font-size: 1.8rem;
+    margin-top: 5rem;
+}
+
+/** Diseñp Moviles **/
+@media(max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        height: auto;
+    }
+
+    .recuadro {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .sobremi__parrafo {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .iconos {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .recuadro--creador {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .header__nombre {
+        font-size: 3rem;
+    }
+
+    .header__descripcion {
+        font-size: 1.6rem;
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+}
